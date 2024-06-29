@@ -16,3 +16,11 @@ class Resource(models.Model):
 
     def __str__(self):
         return self.filename
+
+class Flashcard(models.Model):
+    '''the flashcard class'''
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    question = models.TextField()
+    answer = models.TextField()
+    resource = models.ForeignKey(Resource, on_delete=models.CASCADE)
