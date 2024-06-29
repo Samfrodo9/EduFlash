@@ -1,4 +1,5 @@
-
+Eduflash/EduFlash/virtal_env/*
 EduFlash/EduFlash/__pycache__/*
 EduFlash/flash/__pycache__/*
 EduFlash/flash/migrations/__pycache__/*
+EduFlash/media/files/*
