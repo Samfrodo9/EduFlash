@@ -1,0 +1,79 @@
+{% extends 'flash/main.html' %}
+{% block catch %}
+{% load static %}
+<div>
+    <section>
+        <div class="container_">
+            <div class="con">
+                <div class="con__text">
+                    <p class="abt-content">EduFlash was born from a fundamental belief: learning shouldn't be a chore. We witnessed countless students and learners struggling with bulky textbooks, endless note-taking, and the pressure to memorize information that quickly vanished. Cramming for exams and feeling stressed became the norm, not the exception.</p>
+					<p class="abt-content">That's why we created EduFlash, short for "Educational Flashcard App". This revolutionary web app is designed to transform your learning experience from a stressful slog into a journey of discovery and enjoyment.  Imagine ditching the heavy textbooks and endless notepads. EduFlash empowers you to create and manage digital flashcards – a much more engaging and portable way to study. But EduFlash goes beyond simple digital flashcards. We've harnessed the power of <em>Artificial Intelligence (AI)</em> to take the busywork out of learning. Say goodbye to manually typing endless questions and answers – EduFlash streamlines the process, letting you focus on what truly matters: understanding the concepts.</p>
+					<p class="abt-content">So, ditch the stress and ignite your learning passion with EduFlash. We're here to make learning enjoyable, effective, and empowering for everyone!</p>
+						
+                </div>
+            </div>
+        </div>
+		<hr>
+        <!--<hr class="dot">-->
+        <div class="contributors">
+            <h1>Contributors</h1>
+            <div class="contributor" id="sam">
+                <div class="contributorImg">
+                    <img class="us" src="{% static 'flash/sam.png' %}" alt="">
+                </div>
+                <div class="contributorInfo">
+                    <p>Hi, I am Samuel. The tech world is my playground, and I'm here to build things that matter.  Learning the ropes at ALX Africa, but I'm always itching to collaborate on projects that push boundaries.</p>
+					<h4>My jam:</h4>
+					<ul>
+						<li>
+						Turning lines of code into something awesome
+						</li>
+						<li>
+							Finding techie fixes for everyday problems
+						</li>
+						<li>
+							Soaking up the beauty of nature
+						</li>
+						<li>
+							Hanging out with like-minded friends
+						</li>
+					</ul>
+						<details>
+							<p>Catching the latest flicks (suggestions welcomed!) and I read Medical Journals</p>
+							<summary>
+							<p>When I'm not glued to the screen?</p>
+							</summary>
+						</details>
+						Let's connect and turn ideas into reality!</p>
+                    <div class="contact">
+                        <h2 style="text-align: center;">Contact him</h2>
+                        <div class="con_links" style="text-align: center;">
+                            <a href="mailto:adeyemifrodo@gmail.com" class="btn">Mail</a>
+                            <a href="https://www.twitter.com/adeyemifrodo" target="_blank" class="btn">Twitter</a>
+                            <a href="https://github.com/Samfrodo9" target="_blank" class="btn">Github</a>
+                            <a href="https://www.linkedin.com/in/samuel-adeyemi-a50055160/" target="_blank" class="btn">Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contributor" id="mimi">
+                <div class="contributorImg">
+                    <img class="us" src="{% static 'flash/mimi.png' %}" alt="An image of Miracle">
+                </div>
+                <div class="contributorInfo">
+                    <p>Chukwu Miracle Chinasa is our talented Frontend Developer who brought EduFlash to life!  She meticulously crafted the user interface (UI) and user experience (UX) to ensure a smooth and intuitive experience for our users.  Miracle designed all the app's pages, and brought life to the project. She also helped with the App’s deployment.</p>
+                    <div class=contact">
+                        <h2>Contact her</h2>
+                        <div class="con_links">
+                            <a href="mailto:mimigolld@gmail.com" class="btn">Mail</a>
+                            <a href="https://x.com/ChukwuMiracle17" target="_blank" class="btn" >Twitter</a>
+                            <a href="https://github.com/Mimifresh" target="_blank" class="btn" >Github</a>
+                            <a href="https://www.linkedin.com/in/chukwu-miracle" target="_blank" class="btn" >Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+</div>
+{% endblock%}
