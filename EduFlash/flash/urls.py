@@ -46,4 +46,13 @@ urlpatterns = [
     #view flashcards
     path('get_resource/<int:fk>/view_flashcards', views.view_flashcards, name='view_flashcards'),
 
+	#update a flashcard
+    path('update_flashcard/<int:pk>', views.update_flashcard, name='update_flashcard'),
+
+    path('update_flashcard/<int:fk>/view_flashcards', views.view_flashcards, name='up_flashcards'),
+
+    #delete a flashcard
+    path('delete_flashcard/<int:pk>', views.delete_flashcard, name='delete_flashcard'),
+    path('delete_flashcard/<int:fk>/view_flashcards', views.view_flashcards, name='de_flashcards'),
+
 ]
