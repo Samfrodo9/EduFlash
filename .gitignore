@@ -3,7 +3,9 @@ EduFlash/EduFlash/__pycache__/*
 EduFlash/flash/__pycache__/*
 EduFlash/flash/migrations/__pycache__/*
 EduFlash/media/files/*
+EduFlash/flash/
 *.pyc
 */*__pycache__
 Eduflash/start.sql
 *media/*
+flash/migrations/*
