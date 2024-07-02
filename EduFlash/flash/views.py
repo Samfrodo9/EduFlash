@@ -6,7 +6,7 @@ import re
 from . import utils
 from django.contrib import messages
 from django.contrib.auth import logout, login, authenticate
-'''This module contains views for the eduflash aoi endpoints'''
+'''This module contains views for the eduflash api endpoints'''
 
 
 # Create your views here.
@@ -161,19 +161,19 @@ def create_flashcards(request, fk):
             flash = models.Flashcard(resource=resource, question=key, answer=value)
             flash.save()
     flashcards = models.Flashcard.objects.filter(resource=fk)
-    # if not request.user.is_authenticated:
-    #     resource.delete()
-    context = {'flashcards': flashcards, 'resource': resource}
+    length = len(flashcards)
+    indexed_flashcards = dict(enumerate(flashcards, start=1))
+    context = {'flashcards': indexed_flashcards, 'resource': resource, 'length': length}
     return render(request, 'flash/flashcards.html', context)
-
 
 def view_flashcards(request, fk):
     '''view available flashcards'''
     resource = models.Resource.objects.get(id = int(fk))
     flashcards = models.Flashcard.objects.filter(resource=fk)
-    context = {'flashcards': flashcards, 'resource': resource}
+    length = len(flashcards)
+    indexed_flashcards = dict(enumerate(flashcards, start=1))
+    context = {'flashcards': indexed_flashcards, 'resource': resource, 'length': length}
     return render(request, 'flash/flashcards.html', context)
-
 
 def update_flashcard(request, pk):
     '''update flashcard specified by pk'''
@@ -182,14 +182,16 @@ def update_flashcard(request, pk):
     if request.method == "POST":
         form = ResourceForm(request.POST, instance=flashcard)
         if form.is_valid():
-            form.save()
-            return redirect('view_flashcards')
+            a = form.save()
+            re_id = a.resource.id
+            return redirect(f'{re_id}/view_flashcards')
     context = {"form": form, 'value': 'update', 'title': 'Update flashcard'}
     return render(request, 'flash/upload.html', context)
 
 def delete_flashcard(request, pk):
     '''delete flashcard specified by pk'''
     flashcard =  models.Flashcard.objects.get(id=pk)
+    re_id = flashcard.resource.id
     if flashcard:
         flashcard.delete()
-    return redirect('view_flashcards')
+    return redirect(f'{re_id}/view_flashcards')
