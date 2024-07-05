@@ -12,8 +12,8 @@
         {% for key, value in flashcards.items %}
         <div class="flashcards">
             <div class="flash_links">
-                <a class="f_btn" href="{% url 'update_flashcard' value.id %}">update_flashcard</a>
-                <a class="f_btn" href="{% url 'delete_flashcard' value.id %}">delete_flashcard</a>
+                <a class="f_btn" href="{% url 'update_flashcard' value.id %}">Edit flashcard</a>
+                <a class="f_btn" href="{% url 'delete_flashcard' value.id %}">Delete flashcard</a>
             </div>
             <details>
                 <summary>
@@ -42,6 +42,6 @@
           <h4>Happy Studying! &#128516;</h4>
     </div>
   </div>
-  <script src="{% static 'flash/flashcards_.js' %}"></script>
+  <script src="{% static 'flash/flashcards.js' %}"></script>
   
 {% endblock %}

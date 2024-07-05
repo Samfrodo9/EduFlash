@@ -180,12 +180,12 @@ def update_flashcard(request, pk):
     flashcard =  models.Flashcard.objects.get(id=pk)
     form = FlashcardForm(instance=flashcard)
     if request.method == "POST":
-        form = ResourceForm(request.POST, instance=flashcard)
+        form = FlashcardForm(request.POST, instance=flashcard)
         if form.is_valid():
             a = form.save()
             re_id = a.resource.id
             return redirect(f'{re_id}/view_flashcards')
-    context = {"form": form, 'value': 'update', 'title': 'Update flashcard'}
+    context = {"form": form, 'value': 'Update', 'title': 'Update flashcard'}
     return render(request, 'flash/upload.html', context)
 
 def delete_flashcard(request, pk):

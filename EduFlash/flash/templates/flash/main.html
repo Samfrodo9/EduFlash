@@ -9,7 +9,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'flash/main_.css' %}">
     <link rel="stylesheet" href="{% static 'flash/resources.css' %}">
-    <link rel="stylesheet" href="{% static 'flash/uploadd.css' %}">
+    <link rel="stylesheet" href="{% static 'flash/upload.css' %}">
     <link rel="stylesheet" href="{% static 'flash/about.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'flash/favicon (3).ico' %}">
     <link rel="stylesheet" href="{% static 'flash/flashcard.css' %}">
@@ -36,7 +36,7 @@
                         <li class="nav_li"><a href="{% url 'sign_up' %}">Sign up</a></li>
                         <li class="nav_li"><a href="{% url 'log_in' %}">Log in</a></li>
                     {% else %}
-                        <li class="nav_li"><a href="{% url 'resources' %}">resources</a></li>
+                        <li class="nav_li"><a href="{% url 'resources' %}">Resources</a></li>
                         <li class="nav_li"><a href="{% url 'log_out' %}">Log out</a></li>
                     {% endif %}
                         <li class="nav_li"><a href="{% url 'about' %}">About</a></li>
@@ -58,7 +58,7 @@
         {% block hello %}
         {% endblock %}
         {% block catch %}
-        <p id="con_p">Enjoy an active and fun way of learning with Eduflash <br>       to create flashcards <a class="solid_links" href="{% url 'upload_resource' %}">upload your file</a></p>
+        <p id="con_p">Enjoy an active and fun way of learning with Eduflash <br> to automatically create flashcards with AI <a class="solid_links" href="{% url 'upload_resource' %}">upload your file</a></p>
         {% endblock%}
         {% block content%}  
         {% endblock %}
